@@ -6,14 +6,15 @@
 </head>
 <body>
 	<div class="wrapper" >
-		<h1>HyperTask</h1>
-		<div id="facebookLink"><a href="javascript:void(0);">facebook!</a></div>
-		<div><a th:href="@{/signUp/init}">sign-up!</a></div>
+		<h1>UserInfo</h1>
+		<div id="userInfo">
+			<div id="userName" th:text="${userVo.name}"></div>
+			<div id="userId" th:text="${userVo.id}"></div>
+		</div>
 	</div>
 	<div class="hiddenValues">
 		<input id="contextPath" type="hidden" th:value="@{/}"/>
 	</div>
 	<script type="text/javascript" th:src="@{/js/lib/jquery-2.2.4.min.js}"></script>
-	<script type="text/javascript" th:src="@{/js/top.js}"></script>
 </body>
 </html>
